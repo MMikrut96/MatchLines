@@ -1,0 +1,43 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="pl.edu.wat.kulki.pz.controllers.GameBoardController"
+      fx:id="windowContainer"
+      style="-fx-background-image: url('/background1.jpg ')">
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu text="%Action">
+            <MenuItem text="%NewGame" onAction="#newGame">
+            </MenuItem>
+            <MenuItem text="%BackToMenu" onAction="#backToMenu">
+            </MenuItem>
+            <MenuItem text="%Closegame" onAction="#exitGame">
+            </MenuItem>
+        </Menu>
+        <Menu text="%Settings">
+            <Menu text="%Language">
+                <RadioMenuItem fx:id="plRMI" text="%Polish" onAction="#plClicked"/>
+                <RadioMenuItem fx:id="enRMI" text="%English" onAction="#enClicked"/>
+            </Menu>
+            <Menu text="%Background">
+                <RadioMenuItem fx:id="background1" text="%Background1" onAction="#setBackground" userData="1"/>
+                <RadioMenuItem fx:id="background2" text="%Background2" onAction="#setBackground" userData="2"/>
+                <RadioMenuItem fx:id="background3" text="%Background3" onAction="#setBackground" userData="3"/>
+            </Menu>
+        </Menu>
+    </MenuBar>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:id="mainContainer" VBox.vgrow="ALWAYS">
+    <right>
+        <GridPane>
+            <Label text="%Points" GridPane.rowIndex="0" style="-fx-font: 20px Tahoma" GridPane.halignment="CENTER"/>
+            <Label fx:id="playerPoints" text="0" style="-fx-font: 20px Tahoma" GridPane.rowIndex="1" GridPane.halignment="CENTER"/>
+            <Button fx:id="retreatButton" text="%Retreat" GridPane.rowIndex="2"/>
+        </GridPane>
+        </right>
+</BorderPane>
+</VBox>

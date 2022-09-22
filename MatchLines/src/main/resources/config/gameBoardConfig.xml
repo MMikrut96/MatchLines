@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gameBoard>
+    <dimension>9</dimension>
+    <ballOnStart>6</ballOnStart>
+    <ballPerTurn>3</ballPerTurn>
+    <fieldSize>50.0</fieldSize>
+</gameBoard>
